@@ -54,6 +54,21 @@ Blender rendering scripts are available in the [scripts/rendering directory](htt
 
 ![266879371-69064f78-a752-40d6-bd36-ea7c15ffa1ec](https://github.com/allenai/objaverse-xl/assets/28768645/2f042d94-090b-4fd0-b37d-23b5971987ed)
 
+
+## HTTP API
+
+This repository can also run as my own FastAPI service for Objaverse-XL metadata lookup and download jobs. See [`docs/api.md`](docs/api.md) for local Docker usage, endpoint examples, and AWS deployment steps.
+
+Quick start:
+
+```bash
+pip install -r requirements-api.txt
+pip install -e .
+uvicorn objaverse.api:app --host 0.0.0.0 --port 8000
+```
+
+Then open `http://localhost:8000/docs` for the interactive API docs.
+
 ## License
 
 The use of the dataset as a whole is licensed under the ODC-By v1.0 license. Individual objects in Objaverse-XL are licensed under different licenses.
